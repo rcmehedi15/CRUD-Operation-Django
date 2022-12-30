@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.jpeg' %}" type="image/x-icon">
+    <title>Book List | Rc Mehedi Hasan </title>
+</head>
+<body>
+  <div class="container"> <br>
+    <h1>Book List | Rc Mehedi Hasan</h1> 
+
+    <table class="table table-bordered border-primary text-center">
+      <thead class="table-bordered bg-primary text-center text-white">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tbody class="table-bordered table-light">
+
+        {% for book in books %}
+
+        <tr>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.price }}</td>
+          <td><a class="btn btn-success" href="/edit/{{ book.id }}">Edit</a>
+          <a class="btn btn-danger" href="/delete/{{ book.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="/add_book/">Add Book</a>
+
+  </div>
+</body>
+</html>
