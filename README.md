@@ -1,3 +1,8 @@
+<img src="crud-op.png" alt="" />
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QJrnw048P2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 <h1> What is CRUD? </h1>
 Create, Read, Update, and Delete (CRUD) are the four basic functions that models should be able to do, at most.
 
